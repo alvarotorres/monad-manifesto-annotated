@@ -1,10 +1,10 @@
-# Chapter 2 - Problem
+# Capítulo 2 – El Problema
 
-Windows has simple GUI administrative tools for basic users (Control Panel, MMC, etc). Windows also has a rich set of languages, APIs[^2-1] and object models for advanced systems programmers ([C](http://bit.ly/1SmIDVh), [C++](http://bit.ly/1HmcYe5), [C#](http://bit.ly/1EngdQ6), [WMI](http://bit.ly/1ekpnrY), [Win32](http://bit.ly/1IORfB2), .Net, etc). What is missing is the vital middle – administrator-oriented composable tools to type commands and automate management. The vital middle is typically addressed by scripting languages.
+Windows tiene herramientas administrativas GUI simples para usuarios básicos (Panel de control, MMC, etc.). Windows también tiene un rico conjunto de lenguajes, APIs [^2-1] y modelos de objetos para programadores de sistemas avanzados ([C](http://bit.ly/1SmIDVh), [C++](http://bit.ly/1HmcYe5), [C#](http://bit.ly/1EngdQ6), [WMI](http://bit.ly/1ekpnrY), [Win32](http://bit.ly/1IORfB2), .NET, etc.). Lo que falta, son herramientas “compuestas” vitales orientadas al administrador para escribir comandos y automatizar la gestión. El centro de todo esta normalmente regido por lenguajes de scripting.
 
-Our current scripting solutions ([WSH](http://bit.ly/1ekpvra), [VB](http://bit.ly/1Q0VwjT)) focus on the high end of the scripting world which manage the platform using very low level abstractions such as complex object models, schema, and APIs[^2-2]. This is effectively systems programming and misses much of the admin community. Admin scripting flows from command line administration[^2-3], it must be small, simple, incremental, and deal with very high levels of abstraction.
+Nuestras soluciones de secuencias de comandos actuales ([WSH](http://bit.ly/1ekpvra), [VB](http://bit.ly/1Q0VwjT)) se centran en el extremo superior del mundo de secuencias de comandos que gestionan la plataforma utilizando abstracciones de muy bajo nivel, como modelos de objetos complejos, esquemas y API [^2-2]. Esto puede resultar algo extraño para gran parte de la comunidad de administradores. El scripting  de administración debería fluir desde línea de comandos [^2-3], debería ser pequeño, simple, incremental y tratar con niveles de abstracción muy altos.
 
-[John Ousterhout](http://web.stanford.edu/~ouster/cgi-bin/home.php) described the distinction between scripting and systems programming well in his paper [Scripting: Higher Level Programming for the 21st Century](http://web.stanford.edu/~ouster/cgi-bin/papers/scripting.pdf).
+[John Ousterhout](http://web.stanford.edu/~ouster/cgi-bin/home.php) describió la distinción entre scripting y programación de sistemas en su artículo [Scripting: Higher Level Programming for the 21st Century](http://web.stanford.edu/~ouster/cgi-bin/papers/scripting.pdf).
 
 ![Degree of Typing](images/degree-of-typing.png)
 
