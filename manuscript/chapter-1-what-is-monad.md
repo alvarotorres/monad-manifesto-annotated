@@ -26,7 +26,7 @@ ___
 
 [^1-5]: Aunque nunca se expuso como una [MMC](https://msdn.microsoft.com/en-us/library/bb742441.aspx) per se, el motor de PowerShell se implementó como una clase .NET. Cualquier aplicación .NET puede instanciar el motor, ejecutar comandos y traducir la salida a una pantalla GUI. [Exchange Server 2007](https://technet.microsoft.com/en-us/magazine/2006.12.managementshell.aspx) fue el primer producto que lo hizo y sigue siendo uno de los mejores ejemplos del "enfoque completo de PowerShell" para la administración.
 
-[^1-6]: It should be noted that PowerShell very nearly didn't exist because of its dependency on .NET. At the time, in 2004-2006, a startling number of high-profile managed code projects were failing, contributing to the delays in Windows Vista. Running around Microsoft preaching about some management scripting language written in .NET wasn't politically correct at the time. In fact, it was so risky that the Exchange Server team actually built in _entire intermediate API_ under their PowerShell cmdlets, on the theory that they could trash the cmdlets and switch to something else more easily, if needed.
+[^1-6]: Debe tenerse en cuenta que PowerShell casi no existe debido a su dependencia de .NET. En el período 2004-2006, un número sorprendente de proyectos de código gestionado de alto perfil fallaron, lo que contribuyó a los retrasos de Windows Vista. Depender de algún lenguaje de scripting de administración escrito en .NET no era políticamente correcto en ese momento. De hecho, era tan arriesgado que hizo que el equipo de Exchange Server construyera toda su _API intermedia_ bajo Cmdlets de PowerShell, con la teoría de que podrían desechar dichos cmdlets y reemplazarlos por otra cosa, si fuera necesario
 
 
 
