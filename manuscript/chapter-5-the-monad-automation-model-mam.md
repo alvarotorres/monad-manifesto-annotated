@@ -1,35 +1,35 @@
-#Chapter 5 - The Monad Automation Model (MAM)
+#Capítulo 5 - El modelo de automatización de Monad (MAM)
 ___
-Monad defines a highly leveraged automation model for applications.  The model factors out common functions so they can be implemented once in the runtime environment.  This provides both leverage for the developer and consistency for the administrators. The incremental cost to develop and test application-specific functions is quite low compared to the traditional methods.
-![Funtions](images/funtions.png)
+Monad define un modelo de automatización altamente apalancado para aplicaciones. El modelo extrae funciones comunes para que puedan implementarse una vez en el entorno de ejecución. Esto proporciona tanto apalancamiento para el desarrollador como coherencia para los administradores. El costo incremental para desarrollar y probar funciones específicas de la aplicación es bastante bajo en comparación con los métodos tradicionales.
+![Funciones](images/funtions.png)
 
-Developers express an automation model to Admins as a set of user-friendly nouns and verbs.  The developer implements these by subclassing a set of base automation .Net classes and annotating them with automation attributes to produce a set of Cmdlets.  The MSH engine exposes these Cmdlets as APIs and a set of commands.  Administrators and tool developers now get a mainstream way to uniformly access the automation of every aspect of the operating system.
+Los desarrolladores exponen un modelo de automatización a los administradores como un conjunto de nombres y verbos fáciles de utilizar. El desarrollador las implementa subclasificando un conjunto de clases de automatización base de .NET, marcándolas con atributos de automatización para producir un conjunto de Cmdlets. El motor MSH expone estos cmdlets como un API y un conjunto de comandos. Los administradores y los desarrolladores de herramientas ahora obtienen una forma general de acceder uniformemente a la automatización de todos los aspectos del sistema operativo.
 
-## _5.1 - An Example_
+## 5.1 - Un ejemplo
 
-Imagine the developer who needs to expose the Windows eventlog for reporting automation.  The developer decides how to structure the automation in terms of nouns and verbs ("Get-EventLog").  Monad provides strong guidance on this subject.  The developer then writes a CmdLet (in C#, VB.NET, COBOL, etc) to expose this function.
+Imagine al desarrollador que necesita exponer el registro de sucesos de Windows para la automatización de informes. El desarrollador decide cómo estructurar la automatización en términos de sustantivos y verbos ("Get-EventLog"). Monad proporciona una sólida orientación sobre este tema. El desarrollador escribe un CmdLet (en C #, VB.NET, COBOL, etc) para exponer esta función.
 
-A CmdLet might look like this[^5-1]:
-![Example 3](images/example-3.png)
+Un CmdLet podría verse así [^5-1]:
+![Ejemplo 3](images/example-3.png)
 
-At first glance it might appear that the Admin is not going to get much use from this code but nothing could be further from the truth.  Using the CmdNoun and CmdVerb attributes automatically registers this CmdLet as the command *"Get-EventLog"* with a single parameter *"LogName"*.  The Admin then uses this command along with a set of base utility commands to compose a rich set of scenarios:
+A primera vista puede parecer que el Admininistrador no va a obtener mucho uso de este código, pero nada podría estar más lejos de la realidad. El uso de los atributos CmdNoun y CmdVerb registra automáticamente este CmdLet como el comando **"Get-EventLog"** con un solo parámetro **"LogName"**. El Admininistrador entonces usa este comando junto con un conjunto de comandos de utilidad base para componer escenarios mucho más complejos
 
-_What is filling up my application log?_[^5-2]
+¿Qué está llenado el log de aplicación? [^5-2]
 
-![Example 4](images/example-4.png)
+![Ejemplo 4](images/example-4.png)
 
-_Why is MsiInstaller filling up my log?_
+_¿Por qué MSI Installer está llenando el log?_
 
-![Example 5](images/example-5.png)
-By changing the last CmdLet in the pipeline, this information can be output in XML, CSV, LIST, HTML, EXCEL or any other format.
+![Ejemplo 5](images/example-5.png)
+Al cambiar el último CmdLet en la canalización (pipeline), esta información se puede mostrar en XML, CSV, LIST, HTML, EXCEL o cualquier otro formato.
 
-_Is my eventlog usage regular across the week?_
+_¿El uso de mi registro de eventos es regular a lo largo de la semana?_
 
-![Example 6](images/example-6.png)
+![Ejemplo 6](images/example-6.png)
 
-The admin can add additional Cmdlets to the pipeline to filter out only those events that where generated on Tuesday and then find out which events occur most on that day `($ Get-EventLog application |Where {$\_.TimeWritten.DayofWeek -eq "Tuesday"} |Group EventID)`.   Having found that the most frequent event on Tuesdays, they can easy filter the log for that event and determine the distribution of that event across the days of the week. `($ Get-EventLog application |Where {$\_.EventID -eq 131080} |Group {$\_.TimeWritten.DayofWeek})`
+El administrador puede agregar Cmdlets adicionales a la canalización (pipeline) para filtrar sólo aquellos eventos que se generaron el martes y luego averiguar qué eventos ocurren más allá de ese día `($ Get-EventLog application |Where {$\_.TimeWritten.DayofWeek -eq "Tuesday"} |Group EventID)`. Después de haber encontrado el evento más frecuente de los martes, pueden filtrar fácilmente el registro para ese evento y determinar la distribución de dicho evento a través de los días de la semana. `($ Get-EventLog application |Where {$\_.EventID -eq 131080} |Group {$\_.TimeWritten.DayofWeek})`
 
-Monad requires a small amount of CmdLet[^5-3] code to be integrated into the runtime environment and take advantage of its rich set of functions and utilities to provide a powerful and relevant set of administrative functions.  While this example focused on an _ad hoc_ investigation, it is obvious how this investigation could lead to a set of automated nightly reports.  This example is a narrow scenario; comprehensive Cmdlets would need to provide a full range of verbs, have the input extensively checked, and perform error handling.  Still, the savings in development and test are dramatic.
+Monad requiere una pequeña cantidad de código CmdLet [^5-3] para integrarse en el entorno de ejecución y aprovechar su rico conjunto de funciones y utilidades para proporcionar un potente y distinguido conjunto de funciones administrativas. Si bien este ejemplo se centró en una investigación ad hoc, es obvio cómo esta investigación podría conducir a un conjunto de informes nocturnos automatizados. Este ejemplo es un escenario sencillo. Los cmdlets completos necesitarían proporcionar una gama completa de verbos, hacer que las entradas se validen y realizar el manejo de errores. Sin embargo, los ahorros en desarrollo y prueba son dramáticos.
 
 ## _5.2 - Leveraging .Net_
 
