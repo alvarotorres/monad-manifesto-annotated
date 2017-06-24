@@ -42,23 +42,23 @@ Monad adopta un enfoque diferente que proporciona un rico conjunto de servicios 
 
 ___
 
-**Notes:**
-[^4-1]: ORIGINAL: UNIX has the [getopt()](http://www.gnu.org/software/libc/manual/html_node/Using-Getopt.html) call for simple command option parsing. 
+**Notas**:
+ [^4-1]: ORIGINAL: UNIX tiene [getopt ()](http://www.gnu.org/software/libc/manual/html_node/Using-Getopt.html) para el análisis simple de opciones de comandos.
 
-[^4-2]: ORIGINAL: [VMS DCL](http://h71000.www7.hp.com/doc/732final/9996/9996pro.html) and AS400’s CL are the exceptions to this.  They provide a common command parser so the commands that use this have a high degree of syntactic consistency.
+[^4-2]: ORIGINAL: [VMS DCL] (http://h71000.www7.hp.com/doc/732final/9996/9996pro.html) y AS400's CL son las excepciones a esto. Proporcionan un analizador de comandos común para que los comandos que se usan tengan un alto grado de consistencia sintáctica.
 
-[^4-3]: ORIGINAL: There is a wonderful synergy between programmer’s desire to minimize the amount of code they write for management and customers desire to have a consistent management experience.
+[^4-3]: ORIGINAL: Existe una maravillosa sinergia entre el deseo del programador de minimizar la cantidad de código que escribe para la administración y los clientes que desean tener una experiencia de administración consistente.
 
-[^4-4]: Prayer based parsing is when you parse the text and pray that you got it right. e.g. Cut off the first 3 (or was it 4?) lines, cut out column 30-40 (assuming that those spaces are not tabs), cast that as an integer (hmm. – does anyone use 64 bits?...well let’s just hope its 32 bits).
+[^4-4]: El análisis basado en la oración es cuando analiza el texto y luego ora para que lo entienda correctamente. p.ej. Cortar las primeras 3 (¿o eran 4?) Líneas, recortar la columna 30-40 (suponiendo que esos espacios no son Tabs), convertir a un entero (hmm. - ¿Alguien utiliza 64 bits? ... bueno espero que sea de 32 bits).
 
-[^4-5]: Meaning, most developers won't implement interfaces that administrators can use to manage the application. At best, a "lazy" developer might simply put all their configuration information into a text file and call that "manageable." Ironically, that's essentially how Unix is built from the ground up, and it _is_ manageable, because there's little as easy as modifying a text file, especially if it's structured (as in JSON or XML).
+[^4-5]: Lo que significa que la mayoría de los desarrolladores no implementarán interfaces que los administradores puedan usar para administrar la aplicación. En el mejor de los casos, un desarrollador "perezoso" podría simplemente poner toda su información de configuración en un archivo de texto y llamarla "manejable". Irónicamente, eso es esencialmente como Unix se construyó desde cero, y _es manejable_, porque no es tan fácil como modificar un archivo de texto, especialmente si está estructurado (como en JSON o XML).
 
-[^4-6]: Which is why developers hate making them and admins hate using them.
+[^4-6]: Es por eso que los desarrolladores odian hacerlos y los administradores odian usarlos.
 
-[^4-7]: This is the model PowerShell adopted. Cmdlets are instances of a class, which they inherit as their base. That class provides a ton of common functionality, so that the actual code in a cmdlet is around 99% focused on whatever it is that cmdlet is doing. The cmdlet developer doesn't focus on parsing command-line arguments, validating mandatory items, etc.
+[^4-7]: Este es el modelo adoptado por PowerShell. Los cmdlets son instancias de una clase, que heredan de una única base. Esa clase proporciona una tonelada de funcionalidad común, de modo que el código real en un cmdlet está alrededor del 99% centrado en lo que sea que el cmdlet esté haciendo. El desarrollador del cmdlet no se centra en analizar los argumentos de la línea de comandos, validar los elementos obligatorios, etc.
 
-[^4-8]: An "object" in this sense is little more than a set of structured data, not unlike a database table or a spreadsheet. Each object represents some management component, and its properties represent bits of information about that object. Commands don't have to parse these objects to find data, because .Net understands the object structure and can simply retrieve bits of information by referring to the property names.
+[^4-8]: Un "objeto" en este sentido es poco más que un conjunto de datos estructurados, a diferencia de una tabla de base de datos o una hoja de cálculo. Cada objeto representa algún componente de gestión, y sus propiedades representan bits de información sobre ese objeto. Los comandos no tienen que analizar estos objetos para encontrar datos, ya que .NET entiende la estructura del objeto y puede simplemente recuperar los bits de información haciendo referencia a los nombres de propiedades.
 
-[^4-9]: One of the first oblique references to what became PowerShell Remoting, which is indeed a web service based on WS-MAN (Web Services for Management). 
+[^4-9]: Una de las primeras referencias directas a lo que se convirtió en PowerShell Remoting, que de hecho es un servicio web basado en WS-MAN (Web Services for Management).
 
-[^4-10]: PowerShell never really went with specific base classes for these different scenarios, but this is the origin of PowerShell's standardized list of verbs to be used in cmdlet names. This concept also drove the creation of the PSProvider and PSDrive abstraction, wherein any data store could be exposed as a "disk drive," thus enabling a standardized set of commands to manipulate any data store so exposed.
+[^4-10]: PowerShell nunca tuvo clases bases específicas para estos escenarios, pero este fue el origen de la lista estandarizada de verbos de PowerShell  que se utilizaron en los nombres de cmdlet. Este concepto también impulsó la creación de las abstracciones PSProvider y PSDrive, en el que cualquier almacén de datos podría ser expuesto como una "unidad de disco", lo que permite un conjunto estandarizado de comandos para manipular cualquier almacén de datos expuestos.
