@@ -31,11 +31,11 @@ El administrador puede agregar Cmdlets adicionales a la canalización (pipeline)
 
 Monad requiere una pequeña cantidad de código CmdLet [^5-3] para integrarse en el entorno de ejecución y aprovechar su rico conjunto de funciones y utilidades para proporcionar un potente y distinguido conjunto de funciones administrativas. Si bien este ejemplo se centró en una investigación ad hoc, es obvio cómo esta investigación podría conducir a un conjunto de informes nocturnos automatizados. Este ejemplo es un escenario sencillo. Los cmdlets completos necesitarían proporcionar una gama completa de verbos, hacer que las entradas se validen y realizar el manejo de errores. Sin embargo, los ahorros en desarrollo y prueba son dramáticos.
 
-## _5.2 - Leveraging .Net_
+## 5.2 – Aprovechando .NET
 
-Developers use .Net attributes to offload work to the runtime environment[^5-4]. The general philosophy of Monad is to implement things once and then use them everywhere.  A rich set of declarative attributes direct the Monad runtime to perform actions on behalf of the developer.  This transfers the responsibility for writing and testing this code as well as for interacting with the user during error conditions and producing and localizing error messages.
+Los desarrolladores utilizan los atributos .NET para descargar el trabajo al entorno de ejecución [^5-4]. La filosofía general de Monad es implementar las cosas una vez y luego usarlas en todas partes. Un rico conjunto de atributos declarativos dirigen el tiempo de ejecución de Monad para realizar acciones en nombre del desarrollador. Esto transfiere la responsabilidad de escribir y probar este código, así como de interactuar con el usuario durante las condiciones de error y producir y localizar mensajes de error.
 
-Monad defines automation attributes in the following areas:
+Monad define los atributos de automatización en las siguientes áreas:
 
 | | |
 | --- | --- |
