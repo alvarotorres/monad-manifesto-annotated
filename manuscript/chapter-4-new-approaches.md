@@ -45,7 +45,7 @@ ___
 **Notas**:
  [^4-1]: ORIGINAL: UNIX tiene [getopt ()](http://www.gnu.org/software/libc/manual/html_node/Using-Getopt.html) para el análisis simple de opciones de comandos.
 
-[^4-2]: ORIGINAL: [VMS DCL] (http://h71000.www7.hp.com/doc/732final/9996/9996pro.html) y AS400's CL son las excepciones a esto. Proporcionan un analizador de comandos común para que los comandos que se usan tengan un alto grado de consistencia sintáctica.
+[^4-2]: ORIGINAL: [VMS DCL](http://h71000.www7.hp.com/doc/732final/9996/9996pro.html) y AS400's CL son las excepciones a esto. Proporcionan un analizador de comandos común para que los comandos que se usan tengan un alto grado de consistencia sintáctica.
 
 [^4-3]: ORIGINAL: Existe una maravillosa sinergia entre el deseo del programador de minimizar la cantidad de código que escribe para la administración y los clientes que desean tener una experiencia de administración consistente.
 
