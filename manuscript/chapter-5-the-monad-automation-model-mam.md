@@ -52,10 +52,11 @@ Monad define los atributos de automatización en las siguientes áreas:
 
 _**Notas**_
 
-[^5-1]: Briefly, during development, PowerShell's "script cmdlets" (now, "advanced functions") did have a syntax similar to this. In C#, cmdlet source code still looks a lot like this.
+[^5-1]: Brevemente, durante el desarrollo, los "cmdlets de script" de PowerShell (ahora, "funciones avanzadas") tenían una sintaxis similar a ésta. En C #, el código fuente del cmdlet todavía se parece mucho a esto.
 
-[^5-2]: ORIGINAL: "Get-EventLog application" is provided by the sample code above and the rest come from the Monad base commands.  "Group source" counts the number of objects that have the same value for a particular property (i.e. how many times did a particular source show up?).  "Select -First 5" truncates the set of objects to only have the first 5.  "Format-Table" formats the objects and their properties a table
+[^5-2]: ORIGINAL: "Get-EventLog Application" es proporcionado por el código de ejemplo anterior y el resto proviene de los comandos de base de Monad. " Group source" cuenta el número de objetos que tienen el mismo valor para una propiedad en particular (es decir, cuántas veces apareció una fuente en particular). "Select -First 5" trunca el conjunto de objetos para que sólo tengan los primeros 5. "Format-Table" formatea los objetos y sus propiedades una tabla.
 
-[^5-3]: Note that even in this document, Snover wasn't consistent about "CmdLet" versus "Cmdlet." Today, "cmdlet" is the standard. His original idea was to emphasize that a "cmdlet" wasn't a "full command" with all the parsing and whatnot a traditional command implemented; instead, it was a portion of a command, with much of the overhead being provided by the automation engine's base classes.
+[^5-3]: Tenga en cuenta que incluso en este documento, Snover no era coherente acerca de "CmdLet" versus "Cmdlet". Hoy en día, "Cmdlet" es el estándar. Su idea original era enfatizar que un "Cmdlet" no era un "comando completo" con todo el análisis sintáctico, pero no era un comando tradicional implementado. En su lugar, era parte de un comando, con gran parte de la sobrecarga proporcionada por las clases base del motor de automatización.
 
-[^5-4]: Meaning, a .NET developer can tell the .NET runtime to perform certain standardized tasks. You see this a lot in PowerShell: for example, a function can declare a parameter as mandatory, and the shell will enforce that attribtue rather than the function developer having to write logic to do so. 
+[^5-4]: Significado, un desarrollador .NET puede indicar al runtime .NET que realice ciertas tareas estandarizadas. Esto se ve mucho en PowerShell: por ejemplo, una función puede declarar un parámetro como obligatorio y el shell aplicará ese atributo en lugar de que el desarrollador de funciones tenga que escribir la lógica para hacerlo.
+
