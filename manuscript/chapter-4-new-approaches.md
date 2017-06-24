@@ -1,39 +1,40 @@
-# Chapter 4 - New Approaches
+# Capítulo 4 - Nuevos enfoques
 ___
-Monad takes new approaches to the issues of 1) building commands, 2) composing solutions 3) management models and 4) management GUIs.  The Monad architecture flows from the following observations:
+Monad adopta nuevos enfoques a los problemas de 1) construcción de comandos, 2) composición de soluciones 3) modelos de gestión y 4) GUI de gestión. La arquitectura de Monad proviene de las siguientes observaciones:
 
-1.  Most solutions are home brewed and composed out of existing commands by administrators.
-2.  Most solutions are focused on either automating management or providing _ad hoc_ fixes.
-3.  Most administrators are para-programmers.  They either don't have the desire, skill or (more often), the time to do sophisticated programming.
-4.  Most application developers won't make their code manageable unless there is immediate and substantial user benefit[^4-5].
+1. La mayoría de las soluciones son desarrolladas “in house” y compuestas por comandos existentes por los administradores.
+2. La mayoría de las soluciones se centran en la automatización de la gestión o la provisión de correcciones ad hoc.
+3. La mayoría de los administradores no son programadores “natos”. O bien no tienen el deseo, la habilidad o (más a menudo), el tiempo para hacer una programación sofisticada.
+4. La mayoría de los desarrolladores de aplicaciones no harán que su código sea manejable a menos que haya un beneficio inmediato y sustancial para el usuario [^4-5]
 
-## 4.1 - A New Approach to Building Commands
-The traditional approach to building commands is inefficient.  Much of the effort is spent rewriting the same functions over and over again by different people in different ways.  They all:
+## 4.1 - Un nuevo enfoque para construir comandos
+El enfoque tradicional de la construcción de comandos es ineficiente. Gran parte del esfuerzo se dedica a reescribir las mismas funciones una y otra vez por diferentes personas de diferentes maneras. Todos para:
 
-   * Parse, validate, and encode user input.
-   * Document usage.
-   * Log activity.
-   * Format data, output results and report errors.
-   * Operate on remote nodes or sets of remote nodes.
+  * Analizar, validar y codificar la entrada de usuario.
+  * Documentar su uso.
+  * Dejar registro de actividades.
+  * Formatear datos, resultados de salida e informes de errores.
+  * Operar en nodos remotos o conjuntos de nodos remotos.
    
-Yet, despite all this commonality, most platforms[^4-1][^4-2] provide little to no support for doing these activities in common consistent ways. The result is that today's commands are inefficient to develop and inconsistent to use[^4-6].
+Sin embargo, a pesar de toda esta coincidencia, la mayoría de las plataformas [^4-1] [^4-2] proporcionan poco o ningún apoyo para hacer estas actividades de manera coherente. El resultado es que los comandos de hoy en día son ineficientes para desarrollar e inconsistentes en su forma de usar [^4-6].
 
-Monad takes a different approach providing developers maximal leverage and end users maximal consistency by defining an **automation model** for applications which factors out common functions so they can be implemented once in a common runtime environment[^4-3].  Developers no longer produce stand alone executables.  Instead, they write narrowly focused .Net classes ( **Cmdlets** ) which then are exposed as APIs, commands, and GUIs.  The common functions are implemented and tested once and provide a single set of semantics as well as a consistent and uniform set of error messages.[^4-7]
+Monad adopta un enfoque diferente que proporciona a los desarrolladores el máximo aprovechamiento y la máxima consistencia para los usuarios finales, mediante la definición de un modelo de automatización para aplicaciones que afecta a las funciones comunes para que puedan implementarse una vez en un entorno de ejecución común [^4-3]. Los desarrolladores ya no producen ejecutables autónomos. En su lugar, escriben piezas de código muy enfocadas como  clases .NET (Cmdlets) que luego se exponen como API, comandos e interfaces gráficas. Las funciones comunes se implementan y prueban una vez y proporcionan un conjunto único de semántica, así como un conjunto coherente y uniforme de mensajes de error. [^4-7]
 
-## 4.2 - A New Approach to Composing Solutions
-The traditional approach to composing solutions is difficult and fragile.  It uses pipelines to perform prayer-based parsing of text streams[^4-4]. These mechanisms are awkward, inconsistent, and imprecise.  Admins spend the majority of their thought process on mechanisms instead of problem solving.  Monad takes a different approach providing a precise, powerful **script execution engine** for creating pipelines of .Net objects. Instead of piping unstructured text, we pipe .Net objects[^4-8]. This allows the downstream pipeline components to operate directly on the objects and their properties using the .Net [Reflection](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconreflectionoverview.asp) APIs.  (The reflection APIs allow a utility to find the type of an object, what properties/methods it has, get its property values and invoke its methods)
+## 4.2 - Un nuevo enfoque para componer soluciones
+El enfoque tradicional para componer soluciones es difícil y frágil. Utiliza “pipelines” para realizar análisis basado en oraciones de flujos de texto [^4-4]. Estos mecanismos son incómodos, inconsistentes e imprecisos. Los administradores pasan la mayor parte de su tiempo buscando mecanismos para resolver problemas, en lugar de resolver dichos problemas. Monad tiene un enfoque diferente que proporciona un motor de ejecución de secuencias de comandos preciso y potente para crear tuberías (pipelines) de objetos .NET. En lugar de canalizar texto no estructurado, canalizamos objetos .NET [^4-8]. Esto permite que los componentes de la canalización (pipelines) operen a bajo nivel directamente sobre los objetos y sus propiedades utilizando las API [.NET Reflection] (http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconreflectionoverview.asp). (Las API de Reflection permiten encontrar el tipo de un objeto, las propiedades y métodos que tiene, obtener los valores de propiedades e invocar sus métodos).
 
-The Monad Runtime environment provides a means to access Cmdlets and run scripts on remote machines via Web Services.[^4-9]
+El entorno de tiempo de ejecución de Monad proporciona un medio para acceder a los cmdlets y ejecutar secuencias de comandos en máquinas remotas a través de Web Services. [^4-9]
 
-## 4.3 - A New Approach to Management Models
-The traditional approach to management models produces an inconsistent admin experience.  Today there are thousands of locally optimized commands.  Each command developer defines his own management model with a set of names, and concepts.  While copying of popular commands occurs, there is no systemic incentive for doing so.  Efforts have been made to provide guidelines which would drive global optimization but the weight of legacy has made it difficult for such efforts to gain much traction.
+## 4.3 - Un nuevo enfoque de los modelos de gestión
 
-A similar situation exists with today's instrumentation technologies which languish due to lack of tool support.  Instrumentation evangelization efforts are difficult as [product] groups reject the "build it and they will come" strategy.  Tool developers balk at the vast surface area of objects and respond by either providing generic functionality (like monitoring or browsing) across a broad range of objects or providing rich features for a narrow set of objects.
+El enfoque tradicional de los modelos de gestión produce una experiencia de administración inconsistente. Hoy en día hay miles de comandos optimizados localmente. Cada desarrollador de comandos define su propio modelo de gestión con un conjunto de nombres y conceptos. Mientras se produce la copia de comandos populares, no hay incentivo sistémico para hacerlo. Se han hecho esfuerzos para proporcionar directrices que impulsen la optimización global, pero el peso del legado ha dificultado que tales esfuerzos ganen mucha fuerza.
 
-Monad takes a different approach: it minimizes the cost of automation and provides immediate end-user benefit by providing **scenario-based automation** extension classes and in-the-box tools that exploit those classes.  Monad can support almost any automation schema but strongly encourages the use of standard schemas by providing a set of base classes for specific administrative scenarios. Those base classes include: Navigation, Diagnostics, Configuration, Lifecycle,  and Operations[^4-10].  These classes provide common syntax, switches, internationalized error messages and solutions to common scenario problems (e.g. a common implementation of a directory stack for all the navigation commands]).  Monad also provides a set of UI controls and tools that ship with the OS that drive those extensions to perform a particular management task.
+Una situación similar existe con las tecnologías de instrumentación actuales que languidecen debido a la falta de soporte de herramientas. Los esfuerzos de evangelización por instrumentación son difíciles a medida que los grupos [de productos] rechazan la estrategia "construye y vendrá". Los desarrolladores de herramientas se resisten a la vasta superficie de los objetos y responden proporcionando una funcionalidad genérica (como supervisión o navegación) a través de una amplia gama de objetos o proporcionando funciones complejas para un pequeño conjunto de problemas.
+
+Monad adopta un enfoque diferente: minimiza el coste de la automatización y proporciona un beneficio inmediato para el usuario final proporcionando **clases de extensión de automatización** basadas en escenarios y herramientas in-the-box que explotan esas clases. Monad puede soportar casi cualquier esquema de automatización, pero alienta firmemente el uso de esquemas estándar proporcionando un conjunto de clases base para escenarios administrativos específicos. Estas clases base incluyen: Navegación, Diagnóstico, Configuración, Ciclo de Vida y Operaciones [^4-10]. Dichas clases proporcionan una sintaxis común, conmutadores, mensajes de error internacionalizados y soluciones a problemas de escenarios comunes (por ejemplo, una implementación común de una pila de directorios para todos los comandos de navegación). Monad también proporciona un conjunto de controles de interfaz de usuario y herramientas que se suministran con el sistema operativo que controla dichas extensiones para realizar una tarea de gestión específica
 
 
-## 4.4 - A New Approach to Management GUI Tools
+## 4.4 - Un Nuevo Enfoque a las Herramientas GUI de Gestión
 
 The traditional approach to management GUIs provides minimal developer leverage. Today's Windows management GUI tools are developed in the same way that a full blown application is.  They have GUI code, domain logic/constraint enforcement, and API access to local and remote managed objects.  Management GUI services are largely limited to a UI container which facilitates multiplexing multiple tools and a certain level of integration.  This approach requires a sophisticated developer and an exhaustive test matrix.  Because much of the domain logic and constraint enforcement is embedded into the GUI, it is common for the command lines to expose a subset of the functions of a GUI.  The traditional approach works against automation.
 
