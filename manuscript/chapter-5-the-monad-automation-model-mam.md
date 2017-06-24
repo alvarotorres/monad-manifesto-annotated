@@ -39,14 +39,14 @@ Monad define los atributos de automatización en las siguientes áreas:
 
 | | |
 | --- | --- |
-| Parsing Guidance | These tell the parser how to map user input to the CmdLet Request Object.  E.g. how to map parameters to properties, or whether a qualifier is mandatory. |
-| Data Generation | These tell the new shell to process the user input to generate the actual data.  E.g. filename globbing. There will also be globbers for hostnames, ipaddrs, registrykeynames, ProcessNames, etc. |
-| Data Validation | These express validation rules on the input data.  E.g. cardinality of the data, the min/max values of the data, etc. |
-| Encoding Directives | These convey how to encode the processed user input into data objects.  E.g. a CmdLet may want an array of StreamWriters instead of an array of filenames. |
-| Object Processing | Perform a set of common functions on common datatypes.  E.g. perform a ToLower() on strings. |
-| Visibility/Applicability | These provide predicates for visiblity/applicablity.  E.g. Cmdlets can be tagged with the Machine and User Roles.  If a machine does not have the DHCP Server Role, the DHCP server commands will not be visible by default. |
-| Documentation | These provide utilities information about the element.  E.g. Help |
-| Test | These provide hints to utilities to facilitate the auto generation of Test Vectors. |
+| Parsing Guidance | Indica al analizador cómo asignar la entrada del usuario al objeto de petición CmdLet. P.ej. Cómo asignar los parámetros a las propiedades, o si un calificador es obligatorio. |
+| Data Generation | Dice al shell que procese la entrada del usuario para generar los datos reales. También habrá procesadores para hostnames, ipaddrs, registrykeyames, ProcessNames, etc. |
+| Data Validation | Expresan reglas de validación en los datos de entrada. P.ej. Cardinalidad de los datos, valores min/max de los datos, etc. |
+| Encoding Directives | Transmiten la entrada del usuario procesada como objetos de datos. P.ej. Un CmdLet puede querer una matriz de StreamWriters en lugar de una matriz de nombres de archivo. |
+| Object Processing | Realizan un conjunto de funciones comunes en tipos de datos comunes. P.ej. convertir una cadena a minúsculas, etc. |
+| Visibility/Applicability | Proporcionan predicados para visibilidad/aplicabilidad. P.ej. Los cmdlets se pueden etiquetar con la máquina y las funciones del usuario. Si una máquina no tiene la función de servidor DHCP, los comandos del servidor DHCP no estarán visibles de forma predeterminada. |
+| Documentation | Proporcionan información de utilidades sobre el elemento. P.ej. Ayuda |
+| Test | Proporcionan sugerencias a las utilidades para facilitar la generación automática de matrices de prueba. |
 
 ---
 
