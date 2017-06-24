@@ -39,8 +39,8 @@ Monad define los atributos de automatización en las siguientes áreas:
 
 | | |
 | --- | --- |
-| Parsing Guidance | Indica al analizador cómo asignar la entrada del usuario al objeto de petición CmdLet. P.ej. Cómo asignar los parámetros a las propiedades, o si un calificador es obligatorio. |
-| Data Generation | Dice al shell que procese la entrada del usuario para generar los datos reales. También habrá procesadores para hostnames, ipaddrs, registrykeyames, ProcessNames, etc. |
+| Parsing Guidance | Indican al analizador cómo asignar la entrada del usuario al objeto de petición CmdLet. P.ej. Cómo asignar los parámetros a las propiedades, o si un calificador es obligatorio. |
+| Data Generation | Dicen al shell que procese la entrada del usuario para generar los datos reales. También habrá procesadores para hostnames, ipaddrs, registrykeyames, ProcessNames, etc. |
 | Data Validation | Expresan reglas de validación en los datos de entrada. P.ej. Cardinalidad de los datos, valores min/max de los datos, etc. |
 | Encoding Directives | Transmiten la entrada del usuario procesada como objetos de datos. P.ej. Un CmdLet puede querer una matriz de StreamWriters en lugar de una matriz de nombres de archivo. |
 | Object Processing | Realizan un conjunto de funciones comunes en tipos de datos comunes. P.ej. convertir una cadena a minúsculas, etc. |
@@ -50,7 +50,7 @@ Monad define los atributos de automatización en las siguientes áreas:
 
 ---
 
-_**Notes**_
+_**Notas**_
 
 [^5-1]: Briefly, during development, PowerShell's "script cmdlets" (now, "advanced functions") did have a syntax similar to this. In C#, cmdlet source code still looks a lot like this.
 
