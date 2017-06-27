@@ -1,9 +1,9 @@
-# Chapter 9 - The Monad Management Console (MMC)
-Monad provides a rich set of management framework service Cmdlets to facilitate to build management consoles. These services reduce development and test costs to produce admin UIs and consoles while enabling an integrated and admin experience. The services are used to produce an in-the-box management console but can also be used by third parties or in-house IT to implement their ownmanagement console. The goal is to be able to provide 50-70% of a generic management GUI tool for free just by building the right type of Cmdlets. Monad provides the following resources and services:
+# Capítulo 9 - La consola de administración de Monad (MMC)
+Monad proporciona un conjunto rico de Cmdlets de servicio de marco de administración para facilitar la creación de consolas de administración. Estos servicios reducen los costos de desarrollo y de pruebas para producir UIs y consolas de administración, a la vez que permiten una experiencia integrada y administrativa. Los servicios se utilizan para producir una consola de administración integrada, pero también pueden ser utilizados por terceros o por la propia TI para implementar su propia consola de gestión. El objetivo es ser capaz de proporcionar el 50-70% de una herramienta genérica de administración GUI de forma gratuita sólo mediante la construcción del tipo correcto de Cmdlets. Monad ofrece los siguientes recursos y servicios:
 
-1. A script execution environment which provides GUIs uniform and consistent access to local and remote resources.
-2. Integrated GUI and command line environment so that GUI interactions are displayed in a command line console. Users can use this to learn the automation layer and can also directly execute command line actions as well. This mechanism is also leveraged to provide macro record/playback.
-3. Application-specific scripting. The application can expose its inner workings (e.g. buttons, displays, internal data structures etc) via Cmdlets to allow application specific scripting, debugging, and supportability.
-4. Base UI controls associated with specific MMMs. (E.g. Navigation controls, lifecycle controls, diagnostic controls).
-5. Rich set of base error messages which will be localized by MMC.
-6. Declarative UI framework to allow metadata driven custom management GUIs.
+1. Un entorno de ejecución de secuencias de comandos que proporciona a las GUI un acceso uniforme y coherente a recursos locales y remotos.
+2. Una interfaz integrada y un entorno de línea de comandos para que las interacciones GUI se muestren en una consola de línea de comandos. Los usuarios pueden usar esto para aprender la capa de automatización y también pueden ejecutar directamente acciones de línea de comandos. Este mecanismo además proporciona el soporte para la grabación/reproducción de macros.
+3. Scripts de aplicaciones específicas. La aplicación puede exponer sus funciones internas (por ejemplo, botones, pantallas, estructuras de datos internas, etc.) a través de Cmdlets para permitir scripting específico de aplicaciones, depuración y compatibilidad.
+4. Controles de la interfaz de usuario base asociados con MMMs específicos. (Por ejemplo, controles de navegación, controles del ciclo de vida, controles de diagnóstico).
+5. Conjunto rico de mensajes de error de base que se localizarán por MMC.
+6. Un marco de interfaz de usuario declarativa para permitir GUI de administración personalizada basada en metadatos.
