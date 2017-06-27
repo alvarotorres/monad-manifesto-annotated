@@ -5,7 +5,7 @@ as annotated by the PowerShell Community
 
 ---
 
-This project is intended to preserve and annotate "[The Monad Manifesto](http://www.jsnover.com/blog/2011/10/01/monad-manifesto/)," a paper written by Windows PowerShell inventor[Jeffrey Snover](https://social.technet.microsoft.com/profile/Jeffrey%20Snover%20Windows%20Server) at Microsoft in [2002](http://takemeback.to/08-August-2002#.VWsXW1xVhBc). The idea for this project came from Pluralsight author [Tim Warner](http://www.pluralsight.com/author/tim-warner), with the initial annotations being made by Tim and Microsoft MVP [Don Jones](https://twitter.com/concentrateddon). 
+Este proyecto está destinado a preservar [The Monad Manifesto](http://www.jsnover.com/blog/2011/10/01/monad-manifesto/), un documento escrito por el inventor de Microsoft Windows PowerShell [Jeffrey Snover](https://social.technet.microsoft.com/profile/Jeffrey%20Snover%20Windows%20Server) en Microsoft en 2002. La idea de este proyecto fue del autor de Pluralsight [Tim Warner](http://www.pluralsight.com/author/tim-warner), con las anotaciones iniciales que hicieroen Tim y el Microsoft MVP [Don Jones](https://twitter.com/concentrateddon).
 
 The original Manifesto was a forward-looking document, predating the public release of PowerShell by around 4 years. In the years since PowerShell's [2006 release](http://blogs.msdn.com/b/powershell/archive/2006/11/14/windows-powershell-1-0-released.aspx), the product has evolved substantially - but always around the broad brush strokes outlined in the Manifesto.
 
