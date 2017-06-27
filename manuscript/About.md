@@ -7,11 +7,11 @@ as annotated by the PowerShell Community
 
 Este proyecto está destinado a preservar [The Monad Manifesto](http://www.jsnover.com/blog/2011/10/01/monad-manifesto/), un documento escrito por el inventor de Microsoft Windows PowerShell [Jeffrey Snover](https://social.technet.microsoft.com/profile/Jeffrey%20Snover%20Windows%20Server) en Microsoft en 2002. La idea de este proyecto fue del autor de Pluralsight [Tim Warner](http://www.pluralsight.com/author/tim-warner), con las anotaciones iniciales que hicieroen Tim y el Microsoft MVP [Don Jones](https://twitter.com/concentrateddon).
 
-The original Manifesto was a forward-looking document, predating the public release of PowerShell by around 4 years. In the years since PowerShell's [2006 release](http://blogs.msdn.com/b/powershell/archive/2006/11/14/windows-powershell-1-0-released.aspx), the product has evolved substantially - but always around the broad brush strokes outlined in the Manifesto.
+El Manifiesto original era un documento prospectivo, anterior a la publicación pública de PowerShell por alrededor de 4 años. En los años transcurridos desde el lanzamiento de PowerShell [2006](http://blogs.msdn.com/b/powershell/archive/2006/11/14/windows-powershell-1-0-released.aspx), el producto ha evolucionado sustancialmente, pero siempre alrededor de los conceptos  descritos en el Manifiesto.
 
-We felt that it was not only important to preserve the document for historical purposes, but also to annotate and expand upon the various concepts it introduces. We'll attempt to link to references for the now-real technologies that the Manifest predicted, and to provide contextual explanations around some of the Manifesto's directives. 
+Consideramos que no sólo es importante conservar el documento con fines históricos, sino también anotar y ampliar los diversos conceptos que introduce. Intentaremos vincular las referencias de las tecnologías reales que el Manifiesto predijo y proporcionar explicaciones contextuales en torno a algunas de las directivas del Manifiesto.
 
-You'll notice [^1] footnotes in the text. These are a [MultiMarkdown](http://fletcherpenney.net/multimarkdown/) feature that aren't supported by our publishing platform, but they're meant to link to corresponding footnotes at the bottom of the page. In some cases, these are Jeffrey's original footnotes, and we've marked those with "ORIGINAL" to set them apart from footnotes we've added ourselves.
+Encontrará [^1] notas de pie de página en el texto. Éstas son una característica de [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)que no son compatibles con nuestra plataforma de publicación, pero están destinadas a vincular a las notas de pie de página correspondientes en la parte inferior de la página. En algunos casos, estas son las notas originales de Jeffrey marcadas como "ORIGINAL" para separarlas de las notas a pie de página que nosotros hemos añadido.
 
 ---
 
