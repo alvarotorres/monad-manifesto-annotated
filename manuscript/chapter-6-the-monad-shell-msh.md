@@ -57,13 +57,13 @@ MSH es un ensamblado .NET que se puede incrustar en cualquier host ejecutable pa
 
 MSH es también un ejecutable autónomo que aloja el motor de ejecución de secuencias de comandos y proporciona una rica experiencia interactiva al mismo tiempo que una experiencia de tipo vt100 convincente. MSH proporciona capacidades gráficas complejas como Intellisense para completar el comando. Los datos se pueden imprimir en formatos gráficos para aprovechar las capacidades de interacción y visualización de las PC.
 
-## _6.3 - MSH Scripting Language_
-MSH provides a full featured scripting language using the functions and syntax of the POSIX Shell model (flow control, faulting handling, variables, function definition, scoping, IO redirection, etc) as a starting point.  These are then modified and expanded upon to either improve the programming experience, take advantage of new functionality or provide a glide path to C# .  The goal is that UNIX admins working with Windows will find it easy to learn and migrate their skills to MSH.
+## 6.3 - Lenguaje de secuencias de comandos de MSH
+MSH proporciona un lenguaje de scripting completo utilizando las funciones y la sintaxis del modelo POSIX Shell (control de flujo, manejo de fallas, variables, definición de funciones, alcance, redireccionamiento IO, etc.) como punto de partida, para mejorar la experiencia de programación, aprovechar la nueva funcionalidad o proporcionar una ruta de evolución a C#. El objetivo es que los administradores de UNIX que trabajen con Windows encuentren fácil aprender y migrar sus habilidades a MSH.
 
-In addition to writing traditional functions, users can use the scripting capabilities of MSH to write their own Cmdlets and to add or override verbs to existing CmdLet Nouns.
+Además de escribir funciones tradicionales, los usuarios pueden usar las capacidades de secuencias de comandos de MSH para escribir sus propios Cmdlets y para agregar o reemplazar verbos a los sustantivos existentes de CmdLet.
 
 ___
 
-**Notes**
+**Notas**
 
-[^6-1]: ORIGINAL: Msh will be able to seamlessly invoke legacy commands and legacy shells will be able to seamless invoke Msh CmdLets.  (Msh will provide a mechanism to export CmdLets for access from the legacy shells) [In fact, PowerShell never implemented an easy way for legacy commands to invoke cmdlets]
+[^6-1]: ORIGINAL: MSH podrá invocar de forma transparente los comandos heredados y los shells heredados podrán invocar sin problemas MSH CmdLets. (MSH proporcionará un mecanismo para exportar CmdLets para el acceso desde los shells heredados) [De hecho, PowerShell nunca implementó una forma fácil de invocar cmdlets para comandos heredados].
