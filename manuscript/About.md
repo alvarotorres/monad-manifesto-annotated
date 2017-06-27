@@ -11,7 +11,7 @@ El Manifiesto original era un documento prospectivo, anterior a la publicación 
 
 Consideramos que no sólo es importante conservar el documento con fines históricos, sino también anotar y ampliar los diversos conceptos que introduce. Intentaremos vincular las referencias de las tecnologías reales que el Manifiesto predijo y proporcionar explicaciones contextuales en torno a algunas de las directivas del Manifiesto.
 
-Encontrará [^1] notas de pie de página en el texto. Éstas son una característica de [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)que no son compatibles con nuestra plataforma de publicación, pero están destinadas a vincular a las notas de pie de página correspondientes en la parte inferior de la página. En algunos casos, estas son las notas originales de Jeffrey marcadas como "ORIGINAL" para separarlas de las notas a pie de página que nosotros hemos añadido.
+Encontrará [^1] notas de pie de página en el texto. Éstas son una característica de [MultiMarkdown](http://fletcherpenney.net/multimarkdown/) que no son compatibles con nuestra plataforma de publicación, pero están destinadas a vincular a las notas de pie de página correspondientes en la parte inferior de la página. En algunos casos, estas son las notas originales de Jeffrey marcadas como "ORIGINAL" para separarlas de las notas a pie de página que nosotros hemos añadido.
 
 ---
 
