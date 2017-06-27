@@ -12,9 +12,11 @@ Microsoft localizará todas las partes visibles de estos escenarios (verbos, cal
 La navegación proporciona un ejemplo de un modelo de gestión. Habrá una clase base para todos los Cmdlets que quieran hacer Navigation. Esto definirá los verbos (pwd, cd, pushd, dirs, popd, dir), mensajes de error comunes y proporcionará implementaciones comunes para problemas comunes (pushd, dirs y popd se implementarán una vez). Esa clase base puede ser “subclaseada” para proporcionar una experiencia de administración consistente con una cantidad mínima de código. Una vez que el administrador aprende cómo usar este modelo, podrá utilizarlo en una amplia gama de recursos. Navegar el sistema de archivos será el caso por defecto:
 
 ![Example 1](images/example-1.png)
+
 Los mismos comandos se pueden utilizar para explorar el Registro:
 
 ![Example 2](images/example-2.png)
+
 Los mismos comandos se pueden utilizar para explorar el sistema de Ayuda, Active Directory, bases de datos SQL, WMI u otros espacios de nombres.
 
 
